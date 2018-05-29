@@ -1,0 +1,21 @@
+body{
+  background-color:black;
+  background-image:url(../images/newspaper.jpg);
+  background-size:cover;
+  background-attachment: fixed;
+  min-height:100vh;
+  color:white;
+  padding:2vmax;
+}
+.cart-item-amount input{
+  max-width: 40px;
+}
+.darker{
+  background:rgba(0,0,0,0.5);
+  padding:10px;
+  margin:10px;
+}
+.darker .nav-link{
+  color:white;
+  font-weight: bold;
+}
