@@ -8,8 +8,8 @@ const HelloComponent = {
   `,
   data(){
     return{
-      title: "Den magnifika Skidbutiken",
-      description: "Den bästa skidshopen för de bästa skidåkarna"
+      title: "Welcome to The Magazine Store",
+      description: "The greatest mag store on the east side"
     }
   }
 

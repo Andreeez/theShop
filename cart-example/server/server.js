@@ -115,12 +115,10 @@ app.post('/rest/products', async(req, res)=>{
   }
 });
 
-// app.put('/rest/products/:id', async(req, res)=>{
-  app.put('/rest/products', async(req, res)=>{
+app.put('/rest/products/:id', async(req, res)=>{
   //res.send('We would update a product');
   // get the product from the db
-  // let product = await Product.findOne({_id: req.params.id});
-  let product = await Product.find();
+  let product = await Product.findOne({_id: req.params.id});
   // perform update
   let result = await product.update(req.body);
   if(result.ok){

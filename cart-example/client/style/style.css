@@ -1,6 +1,6 @@
 body{
   background-color:black;
-  background-image:url(../images/background.jpg);
+  background-image:url(../images/newspaper.jpg);
   background-size:cover;
   background-attachment: fixed;
   min-height:100vh;
@@ -29,10 +29,4 @@ body{
 
 .card-button{
   max-width: 10em;
-}
-
-.productPicture {
-  width: 200px;
-  height: 200px;
-  
 }
