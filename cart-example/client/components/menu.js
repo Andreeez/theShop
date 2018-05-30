@@ -15,11 +15,18 @@ const MenuComponent = {
     <router-link class="nav-link" to="/login">Login/Regristrera</router-link>
     </li>
     <li class="nav-item">
-    <input name="search" v-model="search"></input>
-    <button v-onclick:search>Sök</button>
-
+    <router-link class="nav-link" to="/info">Info</router-link>
     </li>
+
     </ul>`
+
+
+    // <li class="nav-item">
+    // <input name="search" v-model="search"></input>
+    // <button v-onclick:search>Sök</button>
+
+    // </li>
+
 
     // ,
 
