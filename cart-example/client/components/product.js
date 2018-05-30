@@ -2,16 +2,18 @@ const ProductComponent = {
 
   props: ['item'],
 
+
   template: `
     <div class="card-body">
       <h2>{{item.name}}</h2>
       <div>{{item.price}}kr</div>
-      <p v-html="item.description"></p>
+      <p>{{item.description}}</p>
+      <img class="productPicture" v-bind:src="item.image">
 
       <button class="card-button" v-on:click="addToCart">Lägg till</button>
     </div>
   `,
-  // <p>{{item.description}}</p>
+
 
   data() {
     return {
