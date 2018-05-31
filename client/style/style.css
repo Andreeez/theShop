@@ -20,7 +20,7 @@ body{
   font-weight: bold;
 }
 
-.card-body{
+/* .card-body{
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
@@ -30,6 +30,7 @@ body{
 .card-button{
   max-width: 10em;
 }
+*/
 
 .productPicture {
   width: 200px;
