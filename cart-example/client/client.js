@@ -10,6 +10,9 @@ Vue.component('nav-menu', MenuComponent);
 Vue.component('cart-page', CartPageComponent);
 Vue.component('search', SearchComponent);
 Vue.component('info', InfoPageComponent);
+Vue.component('product-admin', ProductAdminComponent);
+Vue.component('admin-page', AdminPageComponent);
+
 
 
 const http = axios; // using axios 3rd party XHR/REST lib
@@ -22,7 +25,8 @@ const router = new VueRouter({
     { path: '/products', component: ProductPageComponent },
     { path: '/login', component: LoginPageComponent},
     { path: '/cart', component: CartPageComponent},
-    { path: '/info', component: InfoPageComponent}
+    { path: '/info', component: InfoPageComponent},
+    { path: '/admin', component: AdminPageComponent}
 
   ]
 });

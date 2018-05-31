@@ -17,6 +17,9 @@ const MenuComponent = {
     <li class="nav-item">
     <router-link class="nav-link" to="/info">Info</router-link>
     </li>
+    <li class="nav-item">
+    <router-link class="nav-link" to="/admin">Adminsida</router-link>
+    </li>
 
     </ul>`
 
