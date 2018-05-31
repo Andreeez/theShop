@@ -8,6 +8,14 @@ const CartPageComponent = {
             <div class="col-12">
                 <label for="first-name">Förnamn:</label>
                 <input name="first-name" v-model="firstName"></input>
+                <label for="last-name">Efternamn:</label>
+                <input name="last-name" v-model="lastName"></input>
+                <label for="adress">Adress:</label>
+                <input name="adress" v-model="adress"></input>
+                <label for="phonenumber">Telefonnummer:</label>
+                <input name="first-name" v-model="phoneNumber"></input>
+                <label for="customer-email">Email:</label>
+                <input name="customer-email" v-model="customerEmail"></input>
                 <button v-on:click="pay">Betala</button>
             </div>
         </div>
@@ -18,7 +26,11 @@ const CartPageComponent = {
 
     data(){
         return{
-            firstName: ''
+            firstName: '',
+            lastName: '',
+            adress: '',
+            phoneNumber: '',
+            customerEmail: ''
         }
     },
 
@@ -28,7 +40,10 @@ const CartPageComponent = {
             console.log('pay');
 
             http.post('/rest/pay', {
-            
+                firstName: this.firstName,
+                lastName: this.lastName,
+                adress: this.adress,
+                phoneNumber: this.phoneNumber
               }).then(response => {
                 console.log(response);
 
