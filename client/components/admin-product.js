@@ -18,9 +18,9 @@ const AdminProductComponent = {
                 <label>Momssats
                     <input type="text" v-model="vat" :disabled="loading" />
                 </label>
-                <!-- <label>Kategori
+                <label>Kategori
                     <input type="text" v-model="category" :disabled="loading" />
-                </label> -->
+                </label>
                 <button type="submit" :disabled="loading">Skapa</button>
                 <br/>
                 <span v-if="message">{{message}}</span>
@@ -31,7 +31,7 @@ const AdminProductComponent = {
         return {
             name: '',
             description: '',
-            // category: '',
+            category: '',
             image: '',
             price: 0,
             vat: 0.25,
@@ -48,7 +48,7 @@ const AdminProductComponent = {
             {
                 name: this.name,
                 description: this.description,
-                // category: this.category,
+                category: this.category,
                 image: this.image,
                 price: this.price,
                 vat: this.vat,
@@ -73,5 +73,3 @@ const AdminProductComponent = {
         }
     }
 }
-
-
