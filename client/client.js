@@ -11,7 +11,8 @@ Vue.component('cart-page', CartPageComponent);
 Vue.component('search', SearchComponent);
 Vue.component('admin', AdminPageComponent);
 Vue.component('admin-product', AdminProductComponent);
-
+Vue.component('category-menu', CategoryMenuComponent);
+Vue.component('category', CategoryComponent);
 
 const http = axios; // using axios 3rd party XHR/REST lib
 
@@ -32,25 +33,6 @@ const router = new VueRouter({
 let app = new Vue({
   el: "#app",
   router
-
-  // created()
-  // {
-  //     // ladda in litta data
-  //     http.get('/rest/products/').then(response =>
-  //     {
-  //         console.log('products', response.data)
-  //         this.products = response.data;
-  //     }).catch(e =>
-  //     {
-  //         console.error(e);
-  //     });
-  // },
-  // data()
-  // {
-  //     return {
-  //         products: []
-  //     }
-  // }
 });
 
 
