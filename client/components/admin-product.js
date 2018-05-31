@@ -21,6 +21,9 @@ const AdminProductComponent = {
                 <label>Kategori
                     <input type="text" v-model="category" :disabled="loading" />
                 </label>
+                <label>Bild
+                    <input type="text" v-model="image" :disabled="loading" placeholder="filename.ext"/>
+                </label>
                 <button type="submit" :disabled="loading">Skapa</button>
                 <br/>
                 <span v-if="message">{{message}}</span>
@@ -49,7 +52,7 @@ const AdminProductComponent = {
                 name: this.name,
                 description: this.description,
                 category: this.category,
-                image: this.image,
+                image: 'images/' + this.image,
                 price: this.price,
                 vat: this.vat,
                 artnr: this.artnr,
