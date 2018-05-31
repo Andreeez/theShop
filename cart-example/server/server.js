@@ -43,6 +43,8 @@ const Product = require('./models/product.js');
 global.Cart = require('./models/cart.js');
 const User = accessManager.models.user;
 
+const Order = require('./models/order.js');
+
 // MIDDLEWARES
 const CartMiddleware = require('./middlewares/cart-middleware.js');
 app.use(CartMiddleware);
@@ -58,22 +60,30 @@ app.post('/rest/pay', async(req, res)=>{
   let paymentSum = 0;
 
   const cart = await Cart.findOne({_id: req.session.cart}).populate('items.product');
+  
+  // let order = (req.session.user.id)
+  // try{
+  //   order.save();
+  //   res.json(order);
+  // }catch(err){
+  //   console.error(err);
+  //   res.json(err);
+  // }
 
   for(let item of cart.items){
     
     const price = item.product.price * item.amount;
-    // if(paymentSum < 100){
-    //   paymentSum + 200;
-    //   paymentSum += price;
-    // } 
     paymentSum += price;
-
-
   }
 
+  let frakt = 200;
+  if(paymentSum > 800){
+    console.log('Gratis frakt');
 
-  // res.json(paymentSum);
+  } else if(paymentSum <= 800){
+    paymentSum += frakt;
 
+  }
 
   let customer = await stripe.customers.create(
     { "email": userEmail }

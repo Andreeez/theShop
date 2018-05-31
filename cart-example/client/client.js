@@ -35,25 +35,7 @@ const router = new VueRouter({
 let app = new Vue({
   el: "#app",
   router
-
-  // created()
-  // {
-  //     // ladda in litta data
-  //     http.get('/rest/products/').then(response =>
-  //     {
-  //         console.log('products', response.data)
-  //         this.products = response.data;
-  //     }).catch(e =>
-  //     {
-  //         console.error(e);
-  //     });
-  // },
-  // data()
-  // {
-  //     return {
-  //         products: []
-  //     }
-  // }
+  
 });
 
 

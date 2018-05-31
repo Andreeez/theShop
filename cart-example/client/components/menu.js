@@ -9,17 +9,17 @@ const MenuComponent = {
         <router-link class="nav-link" to="/products">Produkter</router-link>
       </li>
       <li class="nav-item">
-      <router-link class="nav-link" to="/cart">Kundvagn</router-link>
-    </li>
-    <li class="nav-item">
-    <router-link class="nav-link" to="/login">Login/Regristrera</router-link>
-    </li>
-    <li class="nav-item">
-    <router-link class="nav-link" to="/info">Info</router-link>
-    </li>
-    <li class="nav-item">
-    <router-link class="nav-link" to="/admin">Adminsida</router-link>
-    </li>
+        <router-link class="nav-link" to="/cart">Kundvagn</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" to="/login">Login/Regristrera</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" to="/info">Info</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" to="/admin">Adminsida</router-link>
+      </li>
 
     </ul>`
 
