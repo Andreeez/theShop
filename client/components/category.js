@@ -4,7 +4,15 @@ const CategoryComponent = {
     
     template: `
         <li class="nav-item">
-            <a href="#" class="nav-link router-link-active">{{category}}</a>
+            <button class="nav-link router-link-active" v-on:click="updateCategory">{{category}}</button>
         </li>
-    `
+    `,
+
+    methods: {
+        updateCategory: function(derp) {
+            this.$parent.$parent.category = derp.target.textContent;
+            console.log(this.$parent.$parent.category);
+            // console.log(derp.target.textContent);
+        }
+    }
 }

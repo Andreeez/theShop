@@ -9,7 +9,7 @@ const ProductPageComponent = {
         <h1 v-if="!slice" class="col-12">Produktsida</h1>
         <product v-for="product in filteredProducts" v-bind:item="product" v-bind:key="product._id"></product>
     </div>
-  `,
+    `,
 
     created() {
         http.get('/rest/products').then((response) =>
@@ -30,6 +30,7 @@ const ProductPageComponent = {
     computed: {
         filteredProducts: function ()
         {
+            console.log("derp");
             return this.products.filter((product) =>
             {
                 return product.name.match(this.search);
@@ -40,7 +41,8 @@ const ProductPageComponent = {
     data() {
         return {
             products: [],
-            search: ""
+            search: "",
+            category: null
         };
     }
 };
