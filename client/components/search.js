@@ -6,7 +6,6 @@ const SearchComponent = {
             <input placeholder="sök produkt" v-model="searchItem" type="text" />
           </label>
           Du sökte efter : {{searchItem}}
-          
     
           <div v-if="searchItem" v-for="product in filteredProducts">
                 <h2>{{product.name}}</h2>
@@ -19,7 +18,7 @@ const SearchComponent = {
       http.get('/rest/products').then((response) => {
         this.products = response.data;
         
-  //  Kod för att filtrera och söka vidare, ex för att viosa 3 första produkterna på första sidan
+        //  Kod för att filtrera och söka vidare, ex för att viosa 3 första produkterna på första sidan
          // this.products = response.data.splice(0,2);
   
       }).catch((error) => {
