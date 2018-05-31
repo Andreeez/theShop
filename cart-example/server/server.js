@@ -62,10 +62,10 @@ app.post('/rest/pay', async(req, res)=>{
   for(let item of cart.items){
     
     const price = item.product.price * item.amount;
-    if(paymentSum < 100){
-      paymentSum + 200;
-      paymentSum += price;
-    } 
+    // if(paymentSum < 100){
+    //   paymentSum + 200;
+    //   paymentSum += price;
+    // } 
     paymentSum += price;
 
 

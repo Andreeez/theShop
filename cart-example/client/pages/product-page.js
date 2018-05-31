@@ -7,8 +7,9 @@ const ProductPageComponent = {
   
   template: `
     <div class="row">
-    <div v-if="!slice"><input type="text" v-model="search" placeholder="Sök produkter"/></div>
     <h1 v-if="!slice" class="col-12">Produktsida</h1>
+    <div v-if="!slice"><input type="text" v-model="search" placeholder="Sök produkter"/></div>
+
     <div class="col-12 card-body">
 
       <product
