@@ -51,7 +51,7 @@ const CartPageComponent = {
                 phoneNumber: this.phoneNumber
               }).then(response => {
                 console.log(response);
-
+                alert('You payed the thing, good job!');
               }).catch(error => {
                 console.error(error)
               });
