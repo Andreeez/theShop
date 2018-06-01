@@ -20,43 +20,5 @@ const MenuComponent = {
       <li class="nav-item">
         <router-link class="nav-link" to="/admin">Adminsida</router-link>
       </li>
-
     </ul>`
-
-
-    // <li class="nav-item">
-    // <input name="search" v-model="search"></input>
-    // <button v-onclick:search>Sök</button>
-
-    // </li>
-
-
-    // ,
-
-    // data(){
-    //   return{
-    //       search: ''
-    //   }
-    // },
-    
-    // methods: {
-      
-    //   search: () =>{
-    //       console.log('searc');
-    
-    //       http.post('/rest/search', {
-          
-    //         }).then(response => {
-    //           console.log(response);
-    
-    //         }).catch(error => {
-    //           console.error(error)
-    //         });
-    //       }
-    //     }    
-    
-  
 }
-
-
-

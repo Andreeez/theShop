@@ -4,7 +4,6 @@ module.exports = mongoose.model('Cart', new mongoose.Schema({
     new mongoose.Schema({
       amount: Number,
       product: {type: mongoose.Schema.Types.ObjectId, ref: 'Product'}
-      
     })
   ]
 }));
