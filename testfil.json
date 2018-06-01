@@ -1,0 +1,25 @@
+Jennys Databas
+
+{
+    _id: ObjectId("5b07b54943ba909b385b2e23"),
+    name: "The Timesss",
+    description: "The Times..",
+    price: NumberInt(20),
+    vat: NumberInt(12),
+    artnr: "abc123",
+    __v: NumberInt(0)
+}
+
+// Mindatabas
+
+// {
+// 	_id: ObjectId("5b0cf857c9d45e574c8bfa55"),
+// 	name: "Fiskejournalen",
+// 	vat: Double(0.23),
+// 	price: NumberInt(105),
+// 	artnr: "def317",
+// 	description: "Bästa fisketidningen ever",
+// 	category: NumberInt(1),
+// 	image: "images/pjaxascott4.jpg",
+// 	__v: NumberInt(0)
+// }

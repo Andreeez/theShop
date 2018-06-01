@@ -48,15 +48,15 @@ const CartPageComponent = {
                 firstName: this.firstName,
                 lastName: this.lastName,
                 adress: this.adress,
-                phoneNumber: this.phoneNumber
-              }).then(response => {
+                phoneNumber: this.phoneNumber,
+              
+            }).then(response => {
                 console.log(response);
-                alert('You payed the thing, good job!');
-              }).catch(error => {
-                console.error(error)
-              });
-            }
-          }    
-    }
+                alert("Grattis din order är lagd");
 
-  
+            }).catch(error => {
+                console.error(error)
+            });
+        }
+    }    
+}

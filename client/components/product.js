@@ -4,11 +4,11 @@ const ProductComponent = {
 
 
     template: `
-    <div class="card-body col-12">
-        <img class="productPicture" v-bind:src="item.image">
+    <div class="card-body">
+        <img class="productPicture" v-bind:src="item.image"/>
         <h2>{{item.name}}</h2>
-        <div>{{item.price}}kr</div>
         <p>{{item.description}}</p>
+        <p>{{item.price}}kr</p>
         <button class="card-button" v-on:click="addToCart">Lägg till</button>
     </div>
   `,

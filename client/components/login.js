@@ -4,7 +4,7 @@ const LoginComponent = {
       <h2>Login</h2>
       <div v-if="user.email">
         <h1>Welcome {{user.email}}!</h1>
-        <button v-on:click="logout" :disabled="loading">Logout</button>
+        <button v-on:click="logout" :disabled="loading">Logga ut</button>
       </div>
       <form v-else @submit.prevent="submit">
         <label>Email
@@ -13,7 +13,7 @@ const LoginComponent = {
         <label>Password
           <input type="password" v-model="password" :disabled="loading" />
         </label>
-        <button type="submit" :disabled="loading">Login</button>
+        <button type="submit" :disabled="loading">Logga in</button>
         <br/>
         <span v-if="message">{{message}}</span>
       </form>
@@ -79,8 +79,3 @@ const LoginComponent = {
     }
   }
 }
-
-
-
-
-

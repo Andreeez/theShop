@@ -1,5 +1,5 @@
 const CartComponent = {
-    template: `
+  template: `
     <div class="card-body">
       <h1>{{title}}</h1>
       <table>
@@ -17,23 +17,23 @@ const CartComponent = {
       </table>
     </div>
   `,
-    created() {
-        // ladda in litta data
-        this.loading = true;
-        http.get('/rest/cart').then(response => {
-            console.log('items', response.data.items)
-            this.items = response.data.items;
-            this.loading = false;
-        }).catch(e => {
-            console.error(e);
-            this.loading = false;
-        });
-    },
-    data() {
-        return {
-            loading: false,
-            items: [],
-            title: "Varukorg"
-        }
+  created(){
+    // ladda in litta data
+    this.loading = true;
+    http.get('/rest/cart').then(response => {
+      console.log('items', response.data.items)
+      this.items = response.data.items;
+      this.loading = false;
+    }).catch(e => {
+      console.error(e);
+      this.loading = false;
+    });
+  },
+  data(){
+    return{
+      loading: false,
+      items: [],
+      title: "Varukorg"
     }
+  }
 }
