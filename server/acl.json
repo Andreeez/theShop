@@ -8,5 +8,6 @@
   {"path":"/rest/admin*", "roles":[ {"role": "admin", "methods": ["ALL"]} ]},
   {"path":"/rest/cart", "roles":[ {"role": "*", "methods": ["*"]} ]},
   {"path":"/rest/pay", "roles":[ {"role": "user", "methods": ["POST"]} ]},
-  {"path":"/rest/order", "roles":[ {"role": "admin", "methods": ["GET"]} ]}
+  {"path":"/rest/order", "roles":[ {"role": "admin", "methods": ["GET"]} ]},
+  {"path":"/rest/category*", "roles":[ {"role": "*", "methods": ["GET"]}, {"role": "admin", "methods":["PUT","POST","DELETE"]} ]}
 ]

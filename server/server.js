@@ -39,6 +39,7 @@ const accessManager = new AccessManager({
 
 // MODELS
 const Product = require('./models/product.js');
+const Category = require('./models/category.js');
 // the cart model needs to be a global, it is used in the cart middleware
 global.Cart = require('./models/cart.js');
 const User = accessManager.models.user;
@@ -149,7 +150,7 @@ app.delete('/rest/products/:id', async (req, res) => {
     res.json(result);
 });
 
-app.post('/rest/categories', async (req, res) =>
+app.post('/rest/category', async (req, res) =>
 {
     let category = await new Category(req.body);
     try
@@ -164,9 +165,9 @@ app.post('/rest/categories', async (req, res) =>
     }
 });
 
-app.get('/rest/categories', async (req, res) =>
+app.get('/rest/category', async (req, res) =>
 {
-    let categories = await Category.find(); // {name:"The Times"}
+    let categories = await Category.find().populate("item.category"); // {name:"The Times"}
     res.json(categories);
 });
 

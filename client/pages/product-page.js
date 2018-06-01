@@ -4,7 +4,6 @@ const ProductPageComponent = {
 
     template: `
     <div class="row">
-        <category-menu v-if="!slice"></category-menu>
         <div v-if="!slice"><input type="text" v-model="search" placeholder="Sök produkter"/></div>
         <h1 v-if="!slice" class="col-12">Produktsida</h1>
         <product v-for="product in filteredProducts" v-bind:item="product" v-bind:key="product._id"></product>

@@ -1,6 +1,6 @@
 const MenuComponent = {
 
-  template: `
+    template: `
     <ul class="nav">
         <li class="nav-item">
             <router-link class="nav-link" to="/">Hem</router-link>
@@ -29,5 +29,24 @@ const MenuComponent = {
         <li class="nav-item">
             <router-link class="nav-link" to="/admin">Adminsida</router-link>
         </li>
-    </ul>`
+    </ul>`,
+    async created()
+    {
+        // http.get('/rest/category').then((response) =>
+        // {
+        //     this.categories = response.data;
+        //     console.log("Produkterna finns" + this.categories);
+        // });
+        let categories = await http.get('/rest/category');
+        if(categories.data)
+        {
+            this.categories = categories.data;
+        }
+    },
+    data()
+    {
+        return {
+            categories: []
+        }
+    }
 }
