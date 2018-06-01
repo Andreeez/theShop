@@ -15,9 +15,6 @@ const OrderAdminComponent = {
               </order-item>
       </table>
       </div>
-
-
-
     `,
 
     created(){

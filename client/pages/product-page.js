@@ -1,55 +1,48 @@
 const ProductPageComponent = {
 
-  props:["slice"],
-  // props:["search"],
+    props: ["slice"],
 
-
-  
-  template: `
+    template: `
     <div class="row">
-    <h1 v-if="!slice" class="col-12">Produktsida</h1>
-    <div v-if="!slice"><input type="text" v-model="search" placeholder="Sök produkter"/></div>
-
-    <div class="col-12 card-body">
-
-      <product
-        v-for="product in filteredProducts"
-        v-bind:item="product"
-        v-bind:key="product._id"
-        ></product>  
-        </div>
-
+        <category-menu v-if="!slice"></category-menu>
+        <div v-if="!slice"><input type="text" v-model="search" placeholder="Sök produkter"/></div>
+        <h1 v-if="!slice" class="col-12">Produktsida</h1>
+        <product v-for="product in filteredProducts" v-bind:item="product" v-bind:key="product._id"></product>
     </div>
-  `    
-  ,
+    `,
 
+    created() {
+        http.get('/rest/products').then((response) =>
+        {
+            if (this.slice)
+            {
+                this.products = response.data.splice(- Number(this.slice));
+            }
+            else
+            {
+                this.products = response.data;
+            }
+        }).catch((error) =>
+        {
+            console.error(error);
+        });
+    },
+    computed: {
+        filteredProducts: function ()
+        {
+            console.log("derp");
+            return this.products.filter((product) =>
+            {
+                return product.name.match(this.search);
+            });
+        }
+    },
 
-  created(){
-    http.get('/rest/products').then((response) => {
-      if(this.slice){
-        this.products = response.data.splice(- Number(this.slice));
-      } 
-      else {
-      this.products = response.data;
+    data() {
+        return {
+            products: [],
+            search: "",
+            category: null
+        };
     }
-
-    }).catch((error) => {
-      console.error(error);
-    });
-  },
-
-  computed: {
-    filteredProducts: function(){
-      return this.products.filter((product)=>{
-        return product.name.match(this.search);
-      });
-    } 
-  },
-  
-data() {
-  return {
-      products: [],
-      search: ""
-    };
-  }
 };
