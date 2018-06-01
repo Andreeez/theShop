@@ -1,41 +1,40 @@
-# some-js-modules
-Just a loose collection of code snippets and modules
+# Check list
+## Obligatoriska User Stories
+### Som butiksägare
+- [x]  …vill jag ha en fungerande webbshop för den svenska marknaden. (?)
+- [x]  …vill jag kunna sälja produkter.
+- [x]  …vill jag kunna testa betalningar.
 
-## access-manager
-This module is published on NPM (not in this repo). Frequently updated.
-[https://www.npmjs.com/package/access-manager](https://www.npmjs.com/package/access-manager)
+### Som kund
+- [ ]  …vill jag ha en användarvänlig, responsiv webbshop med tydlig navigation. <--
+- [x]  …vill jag kunna hitta produkter att köpa.
+- [x]  …vill jag kunna samla varor i en varukorg.
+- [x]  …vill jag kunna betala mina varor i en kassa (betalning i testläge).
 
-## login-logout-registration
-Example Vue.js front-end components
+### Som admin 
+- [x]  …vill jag kunna skapa nya produkter.
 
-## express-basic-rest-crud
-An minimal express+mongoose server with a /rest/products route with:
+--------------------------------------------------------------------------------------
 
-- POST (Create) one item
-- GET (Read) many items
-- GET (-"-) one item
-- PUT (Update) one item
-- DELETE (Delete) one item
+## Valbara User Stories 
+### Som admin
+- [x]  …vill jag kunna se en lista på ordrar.
+- [ ]  …vill jag kunna se kontaktinformation till kunden tillsammans med ordern.
+- [ ]  …vill jag kunna sätta priser exkl moms på produkter.
+- [ ]  …vill jag kunna skapa produktkategorier.
+- [ ]  …vill jag kunna skapa fristående informationssidor om t ex frakt, villkor, etc.
 
-## basic-vue-app
-A simple vue app with a couple of components and a repeater
+### Som kund 
+- [x]  …vill jag kunna söka efter produkter.
+- [x]  …vill jag kunna leta i produktkategorier.
+- [ ]  …vill jag kunna hitta relaterade produkter när jag tittar på en produkt.
+- [ ]  …vill jag kunna se min orderhistorik.
+- [ ]  …vill jag kunna välja att se priser inkl eller exkl moms.
+- [x]  …vill jag kunna se de tre nyaste produkter på sidan.
+- [ ]  …vill jag kunna välja att betala med faktura.
+- [ ]  …vill jag kunna välja att betala med kort.
 
-## cart-example
-An example of a basic cart implementation on both client and server. Note these things to do:
-
-- Creating cart and cart-item components in the client
-- Registering them in the client script
-- Adding the component scripts in index.html
-- Adding the component tags in your html
-- Adding a cart model and a cart middleware in the server
-– Adding express routes for the cart in the server
-- Updating the ACL-list to allow the /rest/cart
-
-## router example
-An example of implementing the vue router in the client, with HTML5 popstate and providing virtual routes for popstate in the server. Note these things to do:
-
-- Add the vue router script in index.html.
-- Define your routes in the client script.
-- Create page-components for the full page views (which will hold your "normal" components for parts of the page views).
-- Define a wildcard route in the server (that does not match the rest routes).
-- Add a menu with (special) links.
+### Som butiksägare 
+- [ ]  …vill jag kunna erbjuda fasta fraktalternativ.
+- [ ]  …vill jag erbjuda gratis frakt vid köp över ett visst pris.
+- [ ]  …vill jag kunna erbjuda periodiska betalningar (prenumerationer, m m)
