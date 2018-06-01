@@ -41,14 +41,12 @@ const ProductPageComponent = {
         {
             return this.filteredProducts.filter((product)=>
             {
-                console.log(this.$route.params.category);
                 if(!this.$route.params.category)
                 {
                     return true;
                 }
                 for(let category of product.categories)
                 {
-                    console.log(category.name);
                     if(category.name == this.$route.params.category)
                     {
                         return true;
