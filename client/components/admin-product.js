@@ -6,30 +6,46 @@ const AdminProductComponent = {
                 <label>Namn
                     <input type="text" v-model="name" :disabled="loading" required />
                 </label>
+                <br/>
                 <label>Beskrivning
                     <input type="text" v-model="description" :disabled="loading" />
                 </label>
+                <br/>
                 <label>Artikel Nummer
                     <input type="text" v-model="artnr" :disabled="loading" placeholder="abc123" />
                 </label>
+                <br/>
                 <label>Pris
                     <input type="text" v-model="price" :disabled="loading" />
                 </label>
+                <br/>
                 <label>Momssats
                     <input type="text" v-model="vat" :disabled="loading" />
                 </label>
-                <label>Kategori
-                    <input type="text" v-model="category" :disabled="loading" />
-                </label>
+                <br/>
                 <label>Bild
                     <input type="text" v-model="image" :disabled="loading" placeholder="filename.ext"/>
                 </label>
+                <br/>
                 <button type="submit" :disabled="loading">Skapa</button>
                 <br/>
                 <span v-if="message">{{message}}</span>
             </form>
         </div>
     `,
+
+    // <label>Kategori
+    //     <input type="text" v-model="category" :disabled="loading" />
+    // </label>
+
+    async created()
+    {
+        let categories = await http.get('/rest/category');
+        if(categories.data)
+        {
+            this.categories = categories.data;
+        }
+    },
     data() {
         return {
             name: '',
