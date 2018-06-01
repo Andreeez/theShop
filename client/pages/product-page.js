@@ -21,47 +21,22 @@ const ProductPageComponent = {
 
     </div>
   `    
-  // <search 
-  // v-if="!slice"
-  // ></search>
- 
-  //  v-for="product in products"
-
   ,
 
 
   created(){
     http.get('/rest/products').then((response) => {
       if(this.slice){
-        // this.products = response.data._rand(this.slice_rand,5);
-        // this.products = response.data.random(0,Number(this.slice));
-        // this.products = response.data.random(this.slice,3);
-        // this.products = response.data.lastIndexOf(0,Number(this.slice));
-        // this.products = response.data.splice(0,Number(this.slice));
-
         this.products = response.data.splice(- Number(this.slice));
-        // this.products = response.data.splice(-3);
-
       } 
-      // else if(this.search) {
-      //   this.products = response.data.filter(this.search);
-
-      // } 
       else {
       this.products = response.data;
     }
-      //  Kod för att filtrera och söka vidare, ex för att viosa 3 första produkterna på första sidan
-      //      this.products = response.data.splice(0,1);
 
     }).catch((error) => {
       console.error(error);
     });
   },
-  // data(){
-  //   return{
-  //     products: []
-  //   }
-  // },
 
   computed: {
     filteredProducts: function(){

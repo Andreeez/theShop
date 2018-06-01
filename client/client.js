@@ -9,12 +9,12 @@ Vue.component('product-page', ProductPageComponent);
 Vue.component('nav-menu', MenuComponent);
 Vue.component('cart-page', CartPageComponent);
 Vue.component('search', SearchComponent);
-Vue.component('product-admin', ProductAdminComponent);
-Vue.component('admin-page', AdminPageComponent);
+Vue.component('admin', AdminPageComponent);
+Vue.component('admin-product', AdminProductComponent);
 Vue.component('admin-order', OrderAdminComponent);
 Vue.component('order-item', OrderItemComponent);
-
-
+Vue.component('category-menu', CategoryMenuComponent);
+Vue.component('category', CategoryComponent);
 
 const http = axios; // using axios 3rd party XHR/REST lib
 
@@ -27,6 +27,7 @@ const router = new VueRouter({
     { path: '/login', component: LoginPageComponent},
     { path: '/cart', component: CartPageComponent},
     { path: '/admin', component: AdminPageComponent}
+
   ]
 });
 
@@ -34,15 +35,4 @@ const router = new VueRouter({
 let app = new Vue({
   el: "#app",
   router
-
 });
-
-
-
-
-
-
-
-
-
-

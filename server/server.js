@@ -114,20 +114,16 @@ app.get('/rest/order', async(req,res)=>{
 });
 
 app.get('/rest/products', async(req, res)=>{
-  //res.send('We are products');
   let products = await Product.find(); // {name:"The Times"}
   res.json(products);
 });
 
 app.get('/rest/products/:id', async(req, res)=>{
-  //res.send('We would get one product');
-  // get the product from the db
   let product = await Product.findOne({_id: req.params.id});
   res.json(product);
 });
 
 app.post('/rest/products', async(req, res)=>{
-  //res.send('We would create a product');
   let product = await new Product(req.body);
   try{
     product.save();
@@ -138,13 +134,9 @@ app.post('/rest/products', async(req, res)=>{
   }
 });
 
-// app.put('/rest/products/:id', async(req, res)=>{
-  app.put('/rest/products', async(req, res)=>{
-  //res.send('We would update a product');
-  // get the product from the db
-  // let product = await Product.findOne({_id: req.params.id});
+app.put('/rest/products', async(req, res)=>{
   let product = await Product.find();
-  // perform update
+
   let result = await product.update(req.body);
   if(result.ok){
     result = req.body;
@@ -153,16 +145,11 @@ app.post('/rest/products', async(req, res)=>{
 });
 
 app.delete('/rest/products/:id', async (req, res)=>{
-  //res.send('We would delete a product');
-  // delete the product from the db
   let result = await Product.deleteOne({_id: req.params.id});
   res.json(result);
 });
 
-// Cart CRUD paths (REMEMBER TO ADD /rest/cart TO ACL)
-
 app.post('/rest/cart', async(req, res)=>{
-  // add a product to the cart (note that the CartMiddleware must already have run)
   let cart = await Cart.findOne({_id: req.session.cart});
   console.log('cart', cart);
   if(cart === null){ // This is a real bug. Haven't figured it out yet.
