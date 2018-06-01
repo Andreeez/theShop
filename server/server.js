@@ -61,6 +61,7 @@ app.post('/rest/pay', async(req, res)=>{
 
   const cart = await Cart.findOne({_id: req.session.cart}).populate('items.product');
   
+
   // let order = (req.session.user.id)
   // try{
   //   order.save();
@@ -97,7 +98,19 @@ app.post('/rest/pay', async(req, res)=>{
     customer: source.customer
   }).catch(e=>console.error);
 
+  let order = await new Order({ 
+    customer: req.user,
+    result: charge,
+    cartData: cart
+  });
+  await order.save();
+
   res.json(charge);
+});
+
+app.get('/rest/order', async(req,res)=>{
+  let orders = await Order.find();
+  res.json(orders);
 });
 
 app.get('/rest/products', async(req, res)=>{

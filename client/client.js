@@ -12,6 +12,8 @@ Vue.component('search', SearchComponent);
 Vue.component('info', InfoPageComponent);
 Vue.component('product-admin', ProductAdminComponent);
 Vue.component('admin-page', AdminPageComponent);
+Vue.component('admin-order', OrderAdminComponent);
+Vue.component('order-item', OrderItemComponent);
 
 
 
@@ -27,7 +29,6 @@ const router = new VueRouter({
     { path: '/cart', component: CartPageComponent},
     { path: '/info', component: InfoPageComponent},
     { path: '/admin', component: AdminPageComponent}
-
   ]
 });
 
@@ -35,7 +36,7 @@ const router = new VueRouter({
 let app = new Vue({
   el: "#app",
   router
-  
+
 });
 
 

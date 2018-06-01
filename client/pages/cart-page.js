@@ -47,7 +47,7 @@ const CartPageComponent = {
               
               }).then(response => {
                 console.log(response);
-
+                alert("Grattis din order är lagd");
 
               }).catch(error => {
                 console.error(error)
