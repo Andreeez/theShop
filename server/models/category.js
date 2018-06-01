@@ -1,3 +1,3 @@
-module.exports = mongoose.model('category', new mongoose.Schema({
+module.exports = mongoose.model('Category', new mongoose.Schema({
     name: String
 }));

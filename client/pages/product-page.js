@@ -48,6 +48,7 @@ const ProductPageComponent = {
                 }
                 for(let category of product.categories)
                 {
+                    console.log(category.name);
                     if(category.name == this.$route.params.category)
                     {
                         return true;

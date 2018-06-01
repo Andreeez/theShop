@@ -115,12 +115,12 @@ app.get('/rest/order', async (req, res) => {
 });
 
 app.get('/rest/products', async (req, res) => {
-    let products = await Product.find(); // {name:"The Times"}
+    let products = await Product.find().populate('categories'); // {name:"The Times"}
     res.json(products);
 });
 
 app.get('/rest/products/:id', async (req, res) => {
-    let product = await Product.findOne({ _id: req.params.id });
+    let product = await Product.findOne({ _id: req.params.id }).populate('categories');
     res.json(product);
 });
 
