@@ -6,9 +6,11 @@ const ProductPageComponent = {
     <div class="row">
         <div v-if="!slice"><input type="text" v-model="search" placeholder="Sök produkter"/></div>
         <h1 v-if="!slice" class="col-12">Produktsida</h1>
-        <product v-for="product in filteredProducts" v-bind:item="product" v-bind:key="product._id"></product>
+        <product v-for="product in categoryFilteredProducts" v-bind:item="product" v-bind:key="product._id"></product>
     </div>
     `,
+
+// <product v-for="product in filteredProducts" v-bind:item="product" v-bind:key="product._id"></product>
 
     created() {
         http.get('/rest/products').then((response) =>
@@ -29,10 +31,28 @@ const ProductPageComponent = {
     computed: {
         filteredProducts: function ()
         {
-            console.log("derp");
             return this.products.filter((product) =>
             {
                 return product.name.match(this.search);
+            });
+        },
+
+        categoryFilteredProducts: function()
+        {
+            return this.filteredProducts.filter((product)=>
+            {
+                console.log(this.$route.params.category);
+                if(!this.$route.params.category)
+                {
+                    return true;
+                }
+                for(let category of product.categories)
+                {
+                    if(category.name == this.$route.params.category)
+                    {
+                        return true;
+                    }
+                }
             });
         }
     },

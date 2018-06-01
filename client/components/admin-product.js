@@ -34,7 +34,7 @@ const AdminProductComponent = {
         return {
             name: '',
             description: '',
-            category: '',
+            categories: [],
             image: '',
             price: 0,
             vat: 0.25,
@@ -51,7 +51,7 @@ const AdminProductComponent = {
             {
                 name: this.name,
                 description: this.description,
-                category: this.category,
+                categories: this.categories,
                 image: 'images/' + this.image,
                 price: this.price,
                 vat: this.vat,

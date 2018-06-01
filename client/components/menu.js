@@ -32,11 +32,6 @@ const MenuComponent = {
     </ul>`,
     async created()
     {
-        // http.get('/rest/category').then((response) =>
-        // {
-        //     this.categories = response.data;
-        //     console.log("Produkterna finns" + this.categories);
-        // });
         let categories = await http.get('/rest/category');
         if(categories.data)
         {
