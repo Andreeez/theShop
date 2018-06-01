@@ -4,63 +4,33 @@ body{
   background-size:cover;
   background-attachment: fixed;
   min-height:100vh;
-  color:rgb(255, 255, 255);
+  color:white;
   padding:2vmax;
-  text-align: center;
 }
-.app {
-  display: flex;
-  justify-content: center;
-  
-}
-
 .cart-item-amount input{
   max-width: 40px;
 }
 .darker{
-  /* background:rgba(0,0,0,0.5); */
+  background:rgba(0,0,0,0.5);
   padding:10px;
   margin:10px;
-  justify-content: center;
-  display: flex;
-  text-align: center;
-  
 }
 .darker .nav-link{
   color:white;
   font-weight: bold;
 }
 
-/* .col-12 card-body{
+/* .card-body{
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  justify-content: center;
-   
-  
-} */
-
-/* .card-body{
-  text-align: center;
-  background-color: red;
-  justify-content: center;
-} */
+  width: 100%;
+}
 
 .card-button{
-  width: 15em;
-  height: 2em;
-  background-color: rgba(1, 173, 165, 0.884);
-  color: white;
-  border: none;
+  max-width: 10em;
 }
-
-button{
-  width: 10em;
-  height: 2em;
-  background-color: rgba(1, 173, 165, 0.884);
-  color: white;
-  border: none;
-}
+*/
 
 .productPicture {
   width: 200px;
