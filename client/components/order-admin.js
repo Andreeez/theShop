@@ -2,18 +2,22 @@ const OrderAdminComponent = {
     template: `
       <div class="card-body">
         <h2>Visa order</h2>
-        <table>
-        <tr>
-          <th>Kundid:</th>
-          <th>Orderid:</th>
-          <th>Totalsumma</th>
-        </tr>
-        <order-item v-if="!loading"
-              v-for="order in orders"
-              v-bind:order="order"
-              v-bind:key="order._id">
-              </order-item>
-      </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Kundid:</th>
+                    <th scope="col">Orderid:</th>
+                    <th scope="col">Totalsumma</th>
+                </tr>
+            </thead>
+            <tbody>
+                <order-item v-if="!loading"
+                    v-for="order in orders"
+                    v-bind:order="order"
+                    v-bind:key="order._id">
+                </order-item>
+            </tbody>
+        </table>
       </div>
     `,
 

@@ -4,7 +4,7 @@ const OrderItemComponent = {
   
     template: `
         <tr>
-            <td>{{order.customer}}</td>
+            <td scope="row">{{order.customer}}</td>
             <td>{{order._id}}</td>
             <td>{{order.result.amount}}</td>
         </tr>
