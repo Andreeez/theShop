@@ -1,7 +1,7 @@
 module.exports = mongoose.model('Product', new mongoose.Schema({
   name: {type: String, required: true},
   description: String,
-  category: Number,
+  categories: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category' }],
   image: String,  
   price: Number,
   vat: Number,
