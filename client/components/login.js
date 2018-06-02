@@ -1,6 +1,6 @@
 const LoginComponent = {
   template: `
-    <div class="card-body">
+    <div class="loginPage card-body">
       <h2>Login</h2>
       <div v-if="user.email">
         <h1>Welcome {{user.email}}!</h1>

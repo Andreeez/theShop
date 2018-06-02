@@ -1,30 +1,34 @@
 const CartPageComponent = {
 
     template: `
+    <div id="cartStyle" class="container">
       <div class="row">
-        <div class="col-12 card-body">
-        <h1>Kundvagn</h1>
-        <cart class="col-12"></cart>
-            <div class="col-10">
-                <label for="first-name">Förnamn:</label>
+        
+            <div class="col-6" c>
+                <label for="first-name">Förnamn:</label><br/>
                 <input name="first-name" v-model="firstName"></input>
                 <br/>
-                <label for="last-name">Efternamn:</label>
+                <label for="last-name">Efternamn:</label><br/>
                 <input name="last-name" v-model="lastName"></input>
                 <br/>
-                <label for="adress">Adress:</label>
+                <label for="adress">Adress:</label><br/>
                 <input name="adress" v-model="adress"></input>
                 <br/>
-                <label for="phonenumber">Telefonnummer:</label>
+                <label for="phonenumber">Telefonnummer:</label><br/>
                 <input name="first-name" v-model="phoneNumber"></input>
                 <br/>
-                <label for="customer-email">Email:</label>
+                <label for="customer-email">Email:</label><br/>
                 <input name="customer-email" v-model="customerEmail"></input>
-                <br/>
-                <button v-on:click="pay">Betala</button>
+                <br/><br/>
+                
             </div>
+            <div class="col-6 ">
+            
+            <cart class="col-6"></cart>
+            <button v-on:click="pay">Betala</button>
         </div>
-      </div>
+        </div>
+     </div> 
     `
     ,
   
