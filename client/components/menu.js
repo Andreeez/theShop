@@ -1,7 +1,7 @@
 const MenuComponent = {
 
     template: `
-    <ul class="nav">
+    <ul class="nav container">
         <li class="nav-item">
             <router-link class="nav-link" to="/">Hem</router-link>
         </li>
