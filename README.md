@@ -21,7 +21,7 @@
 - [x]  **…vill jag kunna se en lista på ordrar.**
 - [ ]  …vill jag kunna se kontaktinformation till kunden tillsammans med ordern.
 - [ ]  …vill jag kunna sätta priser exkl moms på produkter.
-- [ ]  …vill jag kunna skapa produktkategorier.
+- [x]  **…vill jag kunna skapa produktkategorier.**
 - [ ]  …vill jag kunna skapa fristående informationssidor om t ex frakt, villkor, etc.
 
 ### Som kund 
