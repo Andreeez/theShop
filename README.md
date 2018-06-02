@@ -1,3 +1,7 @@
+# Grupp-medlemar
+Anders Hagelkvist
+Thomas van der Ven
+Jesper Hansson
 # Check list
 ## Obligatoriska User Stories
 ### Som butiksägare
