@@ -28,7 +28,7 @@ För att starta projektet lokalt på din dator gör följande två steg.
 - [x]  **…vill jag kunna testa betalningar.**
 
 ### Som kund
-- [ ]  …vill jag ha en användarvänlig, responsiv webbshop med tydlig navigation. <--
+- [x]  …vill jag ha en användarvänlig, responsiv webbshop med tydlig navigation. <--
 - [x]  **…vill jag kunna hitta produkter att köpa.**
 - [x]  **…vill jag kunna samla varor i en varukorg.**
 - [x]  **…vill jag kunna betala mina varor i en kassa (betalning i testläge).**
