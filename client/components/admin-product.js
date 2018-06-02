@@ -2,7 +2,7 @@ const AdminProductComponent = {
     template: `
         <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-4">
             <h2>Skapa Produkt</h2>
             <form @submit.prevent="submit">
                 <label>Namn</br>
