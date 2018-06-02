@@ -1,14 +1,21 @@
 const AdminNewCatComponent = {
     template: `
-        <form @submit.prevent="submit">
-            <label>Ny Kategori
-                <input type="text" v-model="newCategory" :disabled="loading" required />
-            </label>
-            <br/>
-            <button type="submit" :disabled="loading">Lägg till</button>
-            <br/>
-            <span v-if="message">{{message}}</span>
-        </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h2>Skapa Kategori</h2>
+                <form @submit.prevent="submit">
+                    <label>Ny Kategori</br>
+                        <input type="text" v-model="newCategory" :disabled="loading" required />
+                    </label>
+                    <br/>
+                    <button type="submit" :disabled="loading">Lägg till</button>
+                    <br/>
+                    <span v-if="message">{{message}}</span>
+                </form>
+            </div>
+        </div>
+    </div>            
     `,
 
     data() {
