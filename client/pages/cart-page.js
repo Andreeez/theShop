@@ -26,7 +26,7 @@ const CartPageComponent = {
             
             <cart class="col-6"></cart>
             <button v-on:click="pay">Betala</button>
-            <button v-on:click="töm">Töm Varukorg</button>
+            <button v-on:click="tom">Töm Varukorg</button>
         </div>
         </div>
      </div> 
@@ -61,6 +61,13 @@ const CartPageComponent = {
 
             }).catch(error => {
                 console.error(error)
+            });
+        },
+
+        tom: () =>{
+            http.delete('/rest/cart', async (req, res) => {
+                let tempcart = await Cart.findOne({ _id: req.session.cart });
+
             });
         }
     }    
