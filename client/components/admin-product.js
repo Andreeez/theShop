@@ -28,8 +28,13 @@ const AdminProductComponent = {
                 </label>
                 <br/>
                 <label>Kategori
+<<<<<<< HEAD
                     <select v-model="categories" class="custom-select" selectedIndex="0">
                         <option selected>Välj en Kategori</option>
+=======
+                    <select v-model="categories" class="custom-select">
+                        <option selected disabled>Välj en Kategori</option>
+>>>>>>> parent of ec22477... css + more
                         <admin-option
                         v-for="option in options"
                         v-bind:option="option">
@@ -44,16 +49,13 @@ const AdminProductComponent = {
         </div>
     `,
 
-    // <label>Kategori
-    //     <input type="text" v-model="category" :disabled="loading" />
-    // </label>
-
     async created()
     {
         let categories = await http.get('/rest/category');
         if(categories.data)
         {
             this.categories = categories.data;
+            this.options = categories.data;
         }
     },
     data() {
@@ -66,12 +68,21 @@ const AdminProductComponent = {
             vat: 0.25,
             artnr: '',
             message: '',
-            loading: false
+            loading: false,
+            options: []
         };
     },
     methods: {
         submit()
         { // skapa
+            this.categories = [this.categories];
+            console.log(this.name);
+            console.log(this.description);
+            console.log(this.categories);
+            console.log(this.image);
+            console.log(this.price);
+            console.log(this.vat);
+            console.log(this.artnr);
             this.loading = true;
             http.post('/rest/products',
             {

@@ -37,32 +37,3 @@ body{
   height: 200px;
   
 }
-
-
-#cartStyle{
-
-padding: 0 10% 0 10%;
-
-}
-
-#startPage{
-  
-  padding: 2% 10% 1% 10%;
-  
-  }
-
-#productPage{
-  text-align: center;
-  padding: 2% 5% 1% 5%;
-  
-  }  
-  .loginPage{
-    text-align: center;
-    padding: 2% 5% 1% 5%;
-  }    
- 
- .nav{
-
-  width: 100%;
- } 
-

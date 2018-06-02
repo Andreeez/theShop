@@ -3,10 +3,10 @@ const ProductPageComponent = {
     props: ["slice"],
 
     template: `
-    <div id="productPage" class="row" >
-        <div v-if="!slice" ><input type="text" v-model="search" placeholder="Sök produkter"/></div>
-        <h1 v-if="!slice" class="col-12" >Produktsida</h1>
-        <product v-for="product in categoryFilteredProducts" v-bind:item="product" v-bind:key="product._id""></product>
+    <div class="row">
+        <div v-if="!slice"><input type="text" v-model="search" placeholder="Sök produkter"/></div>
+        <h1 v-if="!slice" class="col-12">Produktsida</h1>
+        <product v-for="product in categoryFilteredProducts" v-bind:item="product" v-bind:key="product._id"></product>
     </div>
     `,
 

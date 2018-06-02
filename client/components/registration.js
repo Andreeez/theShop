@@ -1,6 +1,6 @@
 const RegistrationComponent = {
   template: `
-    <div class="loginPage card-body">
+    <div class="card-body">
       <h2>Registrera dig</h2>
       <form @submit.prevent="submit">
         <label>Email
