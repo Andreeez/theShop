@@ -16,7 +16,7 @@ const CartComponent = {
         </cart-item>
         <tr>
             <td>Totalsumma:</td>
-            <td>{{total}} kr</td>
+            <td>{{total}}kr</td>
         </tr>
       </table>
     </div>

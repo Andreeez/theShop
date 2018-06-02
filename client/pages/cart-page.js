@@ -26,7 +26,7 @@ const CartPageComponent = {
             
             <cart class="col-6"></cart>
             <button v-on:click="pay">Betala</button>
-            <button v-on:click="töm">Töm Varukorg</button>
+            
         </div>
         </div>
      </div> 
@@ -46,6 +46,8 @@ const CartPageComponent = {
 
     methods: {
         
+        
+
         pay: () =>{
             console.log('pay');
 
