@@ -16,7 +16,7 @@ const CartComponent = {
         </cart-item>
         <tr>
             <td>Totalsumma:</td>
-            <td>{{total}} kr</td>
+            <td>{{total}}kr</td>
         </tr>
       </table>
     </div>
@@ -27,11 +27,13 @@ const CartComponent = {
         http.get('/rest/cart').then(response => {
             if(!response.data.items)
             {
+                console.log('no items');
                 response.data.items = [];
+                this.items = response.data.items;
             }
             else
             {
-                console.log('items', response.data.items)
+                console.log(response.data.items);
                 this.items = response.data.items;
                 this.items.forEach(item => {
                     let tempTot = item.product.price * item.amount;
