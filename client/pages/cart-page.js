@@ -2,8 +2,7 @@ const CartPageComponent = {
 
     template: `
     <div id="cartStyle" class="container">
-      <div class="row">
-        
+        <div class="row">
             <div class="col-6" c>
                 <label for="first-name">Förnamn:</label><br/>
                 <input name="first-name" v-model="firstName"></input>
@@ -20,20 +19,16 @@ const CartPageComponent = {
                 <label for="customer-email">Email:</label><br/>
                 <input name="customer-email" v-model="customerEmail"></input>
                 <br/><br/>
-                
             </div>
             <div class="col-6 ">
-            
-            <cart class="col-6"></cart>
-            <button v-on:click="pay">Betala</button>
-            <button v-on:click="tom">Töm Varukorg</button>
+                <cart class="col-6"></cart>
+                <button v-on:click="pay">Betala</button>
+            </div>
         </div>
-        </div>
-     </div> 
+    </div>
     `
     ,
   
-
     data(){
         return{
             firstName: '',
@@ -45,9 +40,6 @@ const CartPageComponent = {
     },
 
     methods: {
-        
-        
-
         pay: () =>{
             console.log('pay');
 
@@ -63,13 +55,6 @@ const CartPageComponent = {
 
             }).catch(error => {
                 console.error(error)
-            });
-        },
-
-        tom: () =>{
-            http.delete('/rest/cart', async (req, res) => {
-                let tempcart = await Cart.findOne({ _id: req.session.cart });
-
             });
         }
     }    
