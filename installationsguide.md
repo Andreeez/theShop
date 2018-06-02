@@ -8,7 +8,9 @@ node .\server.js --import-acl="C:\Users\ander\Documents\WIEG17\theShop\server\ac
 
 För att starta projektet lokalt på din dator gör följande två steg.
 1, Starta mongod via cmd
-2, Stå i mappenn \theShop\server
+2, I terminalen gå in mappen \theShop\server , skriv node server alt nodemon server
+
+Skriv in http://localhost:3000/ i webbläsaren.
 
 
 
