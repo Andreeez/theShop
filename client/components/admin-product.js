@@ -27,8 +27,6 @@ const AdminProductComponent = {
                     <input type="text" v-model="image" :disabled="loading" placeholder="filename.ext"/>
                 </label>
                 <br/>
-<<<<<<< HEAD
-=======
                 <label>Kategori
                     <select v-model="categories" class="custom-select" selectedIndex="0">
                         <option selected>Välj en Kategori</option>
@@ -39,7 +37,6 @@ const AdminProductComponent = {
                     </select>
                 </label>
                 <br/>
->>>>>>> parent of 749de7d... Fixed mistake
                 <button type="submit" :disabled="loading">Skapa</button>
                 <br/>
                 <span v-if="message">{{message}}</span>
