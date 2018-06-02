@@ -14,6 +14,10 @@ const CartComponent = {
           v-bind:item="item"
           v-bind:key="item._id">
         </cart-item>
+        <tr>
+            <td>Totalsumma:</td>
+            <td>{{total}} kr</td>
+        </tr>
       </table>
     </div>
   `,
@@ -25,8 +29,16 @@ const CartComponent = {
             {
                 response.data.items = [];
             }
-            console.log('items', response.data.items)
-            this.items = response.data.items;
+            else
+            {
+                console.log('items', response.data.items)
+                this.items = response.data.items;
+                this.items.forEach(item => {
+                    let tempTot = item.product.price * item.amount;
+                    this.total += tempTot;
+                    console.log(this.total);
+                });
+            }
             this.loading = false;
         }).catch(e => {
             console.error(e);
@@ -37,7 +49,8 @@ const CartComponent = {
         return {
             loading: false,
             items: [],
-            title: "Varukorg"
+            title: "Varukorg",
+            total: 0
         }
     }
 }
