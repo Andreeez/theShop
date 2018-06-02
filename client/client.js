@@ -15,6 +15,7 @@ Vue.component('admin-order', OrderAdminComponent);
 Vue.component('order-item', OrderItemComponent);
 Vue.component('category', CategoryComponent);
 Vue.component('admin-option', AdminOptionComponent);
+Vue.component('admin-new-cat', AdminNewCatComponent);
 
 const http = axios; // using axios 3rd party XHR/REST lib
 
