@@ -46,6 +46,8 @@ const CartPageComponent = {
 
     methods: {
         
+        
+
         pay: () =>{
             console.log('pay');
 
