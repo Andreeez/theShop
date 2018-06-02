@@ -28,8 +28,8 @@ const AdminProductComponent = {
                 </label>
                 <br/>
                 <label>Kategori
-                    <select v-model="categories" class="custom-select" selectedIndex="0">
-                        <option selected>Välj en Kategori</option>
+                    <select v-model="categories" class="custom-select">
+                        <option selected disabled>Välj en Kategori</option>
                         <admin-option
                         v-for="option in options"
                         v-bind:option="option">
