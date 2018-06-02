@@ -27,6 +27,16 @@ const AdminProductComponent = {
                     <input type="text" v-model="image" :disabled="loading" placeholder="filename.ext"/>
                 </label>
                 <br/>
+                <label>Kategori
+                    <select v-model="categories" class="custom-select" selectedIndex="0">
+                        <option selected>Välj en Kategori</option>
+                        <admin-option
+                        v-for="option in options"
+                        v-bind:option="option">
+                        </admin-option>
+                    </select>
+                </label>
+                <br/>
                 <button type="submit" :disabled="loading">Skapa</button>
                 <br/>
                 <span v-if="message">{{message}}</span>
@@ -34,16 +44,13 @@ const AdminProductComponent = {
         </div>
     `,
 
-    // <label>Kategori
-    //     <input type="text" v-model="category" :disabled="loading" />
-    // </label>
-
     async created()
     {
         let categories = await http.get('/rest/category');
         if(categories.data)
         {
             this.categories = categories.data;
+            this.options = categories.data;
         }
     },
     data() {
@@ -56,12 +63,21 @@ const AdminProductComponent = {
             vat: 0.25,
             artnr: '',
             message: '',
-            loading: false
+            loading: false,
+            options: []
         };
     },
     methods: {
         submit()
         { // skapa
+            this.categories = [this.categories];
+            console.log(this.name);
+            console.log(this.description);
+            console.log(this.categories);
+            console.log(this.image);
+            console.log(this.price);
+            console.log(this.vat);
+            console.log(this.artnr);
             this.loading = true;
             http.post('/rest/products',
             {
