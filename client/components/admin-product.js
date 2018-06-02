@@ -1,33 +1,35 @@
 const AdminProductComponent = {
     template: `
-        <div class="card-body">
+        <div class="container">
+        <div class="row">
+            <div class="col-8">
             <h2>Skapa Produkt</h2>
             <form @submit.prevent="submit">
-                <label>Namn
+                <label>Namn</br>
                     <input type="text" v-model="name" :disabled="loading" required />
                 </label>
                 <br/>
-                <label>Beskrivning
+                <label>Beskrivning</br>
                     <input type="text" v-model="description" :disabled="loading" />
                 </label>
                 <br/>
-                <label>Artikel Nummer
+                <label>Artikel Nummer</br>
                     <input type="text" v-model="artnr" :disabled="loading" placeholder="abc123" />
                 </label>
                 <br/>
-                <label>Pris
+                <label>Pris</br>
                     <input type="text" v-model="price" :disabled="loading" />
                 </label>
                 <br/>
-                <label>Momssats
+                <label>Momssats</br>
                     <input type="text" v-model="vat" :disabled="loading" />
                 </label>
                 <br/>
-                <label>Bild
+                <label>Bild</br>
                     <input type="text" v-model="image" :disabled="loading" placeholder="filename.ext"/>
                 </label>
                 <br/>
-                <label>Kategori
+                <label>Kategori</br>
                     <select v-model="categories" class="custom-select">
                         <option selected disabled>Välj en Kategori</option>
                         <admin-option
@@ -41,6 +43,8 @@ const AdminProductComponent = {
                 <br/>
                 <span v-if="message">{{message}}</span>
             </form>
+            </div>
+        </div>    
         </div>
     `,
 
