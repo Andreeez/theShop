@@ -1,7 +1,7 @@
 # Grupp-medlemar
-Anders Hagelkvist
-Thomas van der Ven
-Jesper Hansson
+* Anders Hagelkvist
+* Thomas van der Ven
+* Jesper Hansson
 
 #Användings instrucktioner
 Vi går ut ifrån att du (användaren) har installerad NodeJS och MongoDB.
