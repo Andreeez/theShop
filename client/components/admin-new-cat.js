@@ -9,7 +9,7 @@ const AdminNewCatComponent = {
                         <input type="text" v-model="newCategory" :disabled="loading" required />
                     </label>
                     <br/>
-                    <button type="submit" :disabled="loading">Lägg till</button>
+                    <button type="submit" :disabled="loading">Skapa</button>
                     <br/>
                     <span v-if="message">{{message}}</span>
                 </form>
